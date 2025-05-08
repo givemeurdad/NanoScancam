@@ -9,7 +9,7 @@ mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1, min_detection_confidence=0.5)
 
 # Webcam
-cap = cv2.VideoCapture(0)
+cap = st.image(frame, channels="BGR")
 
 # Timer
 start_time = time.time()
@@ -79,7 +79,6 @@ while cap.isOpened():
         break
 
 cap.release()
-cv2.destroyAllWindows()
 
 # -------------------------
 # Score Computation
